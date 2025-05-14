@@ -1,0 +1,11 @@
+saffire-tech-invoice-generator/
+├── server.js
+├── db.js
+├── .env
+├── routes/
+│   └── invoiceRoutes.js
+├── controllers/
+│   └── invoiceController.js
+├── models/
+│   └── invoiceModel.js
+└── package.json

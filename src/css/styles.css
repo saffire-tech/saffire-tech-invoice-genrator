@@ -1,0 +1,280 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(to bottom, #f9f9f9, #e9ecef);
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Container */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+.header {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: #ffffff;
+    padding: 20px;
+    display: flex; /* Use Flexbox for layout */
+    align-items: center; /* Align items vertically */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header img {
+    width: 120px;
+    height: auto;
+    margin-right: 20px; /* Add spacing between the logo and text */
+}
+
+.header-content {
+    text-align: left; /* Align text to the left */
+}
+
+.header h1 {
+    font-size: 2rem;
+    margin: 10px 0;
+}
+
+.header p {
+    font-size: 0.9rem;
+    margin: 5px 0;
+}
+
+/* Invoice Section */
+.invoice {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.invoice h1 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+.customer-info, .invoice-details {
+    margin: 20px 0;
+}
+
+.customer-info label, .invoice-details label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.customer-info input, .customer-info textarea, .invoice-details input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+/* Customer Info Row */
+.customer-row {
+    display: flex; /* Use Flexbox for horizontal alignment */
+    gap: 20px; /* Add spacing between fields */
+    margin-bottom: 20px;
+}
+
+.customer-row .form-group {
+    flex: 1; /* Make all fields take equal width */
+    display: flex;
+    flex-direction: column; /* Stack label and input vertically */
+}
+
+.customer-row .form-group textarea {
+    resize: none; /* Prevent textarea resizing */
+    height: 38px; /* Match height with input fields */
+}
+
+/* Table */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.table th, .table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.table th {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.table td input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Total Section */
+.total {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: right;
+    color: #007bff;
+}
+
+/* Footer */
+.footer {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.invoice-footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#total-amount {
+    color: #007b55; /* Use a distinct green shade for the total price */
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+/* Buttons */
+.button {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    margin-top: 20px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover {
+    background: linear-gradient(135deg, #0056b3, #003f7f);
+    transform: translateY(-2px);
+}
+
+.button:active {
+    transform: translateY(0);
+}
+
+/* Services Section */
+.services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#services-table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    .header h1 {
+        font-size: 1.5rem;
+    }
+
+    .invoice h1 {
+        font-size: 1.2rem;
+    }
+
+    .button {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .invoice-container {
+        max-width: 98vw;
+        padding: 10px;
+    }
+    .header {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    .header img {
+        margin-bottom: 10px;
+    }
+    .header-content {
+        align-items: center;
+    }
+    .invoice-meta {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 10px;
+    }
+    .customer-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .services table,
+    #services-table {
+        font-size: 0.95rem;
+    }
+    .signature-section > div {
+        justify-content: center !important;
+    }
+    #export-buttons {
+        text-align: center !important;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 5px;
+    }
+    .invoice-container {
+        padding: 5px;
+    }
+    .header h1 {
+        font-size: 1.2rem;
+    }
+    .header p,
+    .invoice-footer h2 {
+        font-size: 0.95rem;
+    }
+    .services table,
+    #services-table th,
+    #services-table td {
+        font-size: 0.85rem;
+        padding: 6px;
+    }
+    .signature-section div[style*="width: 220px"] {
+        width: 140px !important;
+    }
+    .signature-section img {
+        max-width: 120px !important;
+        max-height: 35px !important;
+    }
+}
